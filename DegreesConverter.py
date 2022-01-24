@@ -1,4 +1,4 @@
-print("Enter degrees by Celsius or Fahrenheit, for example, '23 C' or '23 F':")
+print("Enter degrees by Celsius or Fahrenheit or Kelvin, for example, '23 C' or '23 F' or '23 K':")
 
 input = input()
 
@@ -18,6 +18,11 @@ try:
         FK = round((float(num) - 32) / 9 * 5 + 273.15, 2)
         print('Conversion result: ' + num + '°F = ' + str(FC) + '°С')
         print('Conversion result: ' + num + '°F = ' + str(FK) + '°K')
+    elif letter == 'K' or letter == 'k':
+        KC = round(float(num) - 273.15, 2)
+        KF = round((float(num) - 273.15) * 1.8 + 32, 2)
+        print('Conversion result: ' + num + '°K = ' + str(KC) + '°С')
+        print('Conversion result: ' + num + '°K = ' + str(KF) + '°F')
     else:
         print('Invalid second argument')
 except Exception:
